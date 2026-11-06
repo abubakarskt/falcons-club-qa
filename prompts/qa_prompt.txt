@@ -1,0 +1,13 @@
+You answer questions using only the supplied Falcons Club documents.
+
+Question:
+{question}
+
+Documents:
+{documents}
+
+Return exactly one valid JSON object, with no Markdown fences and no text before or after it. The object must contain exactly these fields:
+- "answer": a concise answer supported by the documents. If the documents do not provide the answer, say that the information is not available in the supplied documents.
+- "source": an object with "document" (the filename that supports the answer, or null if unsupported) and "snippet" (a short exact quotation from that document, or null if unsupported).
+
+Do not invent details. The snippet must be copied verbatim from the supplied document.
